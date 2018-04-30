@@ -107,3 +107,28 @@ Statistics basic
  贝叶斯信息指数BIC
 
  Link： http://sofasofa.io/forum_main_post.php?postid=1000201, smaller is better
+
+ ### (12) Confusion matrix, Precision/Recall, ROC/AUC
+
+参考链接：http://blog.csdn.net/lichao_ustc/article/details/52702964
+
+应用实例参见kNN下KNN_on_Class_Apr102018.ipynb
+
+ <img src="confusion_matrix.jpg" width="100%" height="100%" alt="Confusion Matrix"/><br />
+ <img src="confusion_matrix_2.jpg" width="100%" height="100%" alt="Confusion Matrix"/><br />
+
+precision = tp / (tp + fp)
+
+recall = tp / (tp + fn)
+
+Wikipedia有关recall和precision的解释：https://en.wikipedia.org/wiki/Precision_and_recall
+
+F1 score, how well do I specifically perform on only malignant cancer prediction? 就是我只关注我在恶性肿瘤上的预测准确率有多高，而不是关注我在所有肿瘤类型恶性+良性一共的准确率有多高（因为你想啊，如果本身有90%的患者都是良性肿瘤，只有10%的患者是恶性肿瘤，那就算我的model再傻逼，我预测全部患者都是良性肿瘤，那我的准确率还有90%呢，但其实这没任何意义）
+
+F1 score = (2*precision*recall) / (precision + recall)
+
+参见百度百科对ROC和AUC的解释：https://baike.baidu.com/item/ROC%E6%9B%B2%E7%BA%BF/775606?fr=aladdin
+
+选择最佳的诊断界限值。ROC曲线越靠近左上角,试验的准确性就越高。最靠近左上角的ROC曲线的点是错误最少的最好阈值，其假阳性和假阴性的总数最少。
+
+最靠近左上角的ROC曲线所代表的受试者工作最准确。哪一种试验的 AUC最大，则哪一种试验的诊断价值最佳。
