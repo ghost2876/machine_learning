@@ -24,8 +24,4 @@ Distance calculation is important, sometimes differences on a small scale appear
 
 ### 用scikit-learn进行kNN分析wdbc.data就是Wisconsin的cancer情况 KNN_on_Class_Apr102018.ipynb
 
-涉及到用scikit-learn的from sklearn.preprocessing import StandardScaler统一量纲
-
-KFold即cross validation
-
-confusion matrix，F1 score，precision，recall，ROC, AUC
+涉及到用scikit-learn的from sklearn.preprocessing import StandardScaler统一量纲，KFold即cross validation以及confusion matrix，F1 score，precision，recall，ROC, AUC
