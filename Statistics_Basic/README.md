@@ -123,6 +123,12 @@ recall = tp / (tp + fn)
 
 Wikipedia有关recall和precision的解释：https://en.wikipedia.org/wiki/Precision_and_recall
 
+    1. 正确率 = 提取出的正确信息条数 /  提取出的信息条数     
+
+    2. 召回率 = 提取出的正确信息条数 /  样本中的信息条数    
+
+两者取值在0和1之间，数值越接近1，查准率或查全率就越高。
+
 F1 score, how well do I specifically perform on only malignant cancer prediction? 就是我只关注我在恶性肿瘤上的预测准确率有多高，而不是关注我在所有肿瘤类型恶性+良性一共的准确率有多高（因为你想啊，如果本身有90%的患者都是良性肿瘤，只有10%的患者是恶性肿瘤，那就算我的model再傻逼，我预测全部患者都是良性肿瘤，那我的准确率还有90%呢，但其实这没任何意义）
 
 F1 score = (2*precision*recall) / (precision + recall)
