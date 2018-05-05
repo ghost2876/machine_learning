@@ -13,9 +13,9 @@ Statistics basic
 
      下述真实的A/B Testing案例来自https://blog.csdn.net/buracag_mc/article/details/74905483，Bayer医药网站客户转化率（新设计为test group，旧设计为control group）：
 
-     <img src="ABTesting_1.jpg" width="100%" height="100%" alt="ABTesting_1"/><br />
-     <img src="ABTesting_2.jpg" width="100%" height="100%" alt="ABTesting_2"/><br />
-     <img src="ABTesting_3.jpg" width="100%" height="100%" alt="ABTesting_3"/><br />
+ <img src="ABTesting_1.jpg" width="100%" height="100%" alt="ABTesting_1"/><br />
+ <img src="ABTesting_2.jpg" width="100%" height="100%" alt="ABTesting_2"/><br />
+ <img src="ABTesting_3.jpg" width="100%" height="100%" alt="ABTesting_3"/><br />
 
      做A/B Testing的一些准则，来自http://baijiahao.baidu.com/s?id=1579982269379294051&wfr=spider&for=pc：
 
