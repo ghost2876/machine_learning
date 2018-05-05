@@ -1,4 +1,31 @@
 Statistics basic
+ ### (0) A/B Testing
+
+     先来了解t test和z test的区别：z-test：大样本；>30;符合z分布；t-test：小样本;<30;符合t分布。
+
+     当总体分布是正态分布时，对任意样本量n，抽样均值分布均为正态分布。如果总体为非正态分布，仅在n值较大的情况下，样本均值分布近似为正态分布。（中心极限定理）
+
+     认为样本均值近似的服从正态分布，当样本数量足够多时，样本方差和均值近似于总体均值和方差；或者，已知总体均值和方差，经过标准变换，认为其服从标准正态分布（z分布）（其实即使经过标准变换的值服从标准正态分布）。这就是z检验。
+
+     仍假设样本均值近似的服从正态分布，总体标准差未知的情况且样本量较小（自由度较小）的情况下（什么叫大：趋向于无穷），用样本方差代替总体方差，认为经过标准正态变换的值不服从z分布，（差异来源：用样本方差代替总体方差）而是服从t分布。（服从分布不一样）这就是t检验。
+
+     BMA-2笔记搜索A/B Testing后续计算过程都有，须知Control Group/Test Group。计算z值(x1 mean-x2 mean)/sqrt(x1 sd^2/n1+x2 sd^2/n2), 假定/alpha=0.01，一般我们用two tailed t test，如果z大于查表的结果则p-value<0.01，于是reject H_0接受H_1（前提先做hypothesis test，H_0是control group == test group, H_1是control group <> test group）。
+
+     下述真实的A/B Testing案例来自https://blog.csdn.net/buracag_mc/article/details/74905483，Bayer医药网站客户转化率（新设计为test group，旧设计为control group）：
+
+     <img src="ABTesting_1.jpg" width="100%" height="100%" alt="ABTesting_1"/><br />
+     <img src="ABTesting_2.jpg" width="100%" height="100%" alt="ABTesting_2"/><br />
+     <img src="ABTesting_3.jpg" width="100%" height="100%" alt="ABTesting_3"/><br />
+
+     做A/B Testing的一些准则，来自http://baijiahao.baidu.com/s?id=1579982269379294051&wfr=spider&for=pc：
+
+     a. 高Confidence level, 尽可能的让你的置信区间接近99%，最少也要95%，尽量减少得出错误结论的可能性（比如受短期波动影响）。
+
+     b. 耐心、不要过早的下结论。开始进行测试后，首先要做的就是等待样本量到达预期量级，或者达到预定时限（半个月）。
+
+     c. 将测试的时间拉长或进行持续性的测试——如果你并不相信当前测试结束后呈现的结果，并且希望排除掉所有潜在错误的可能性，那么我建议你将测试的时间周期拉长。这样就会有更大的样本容量，进而增加测试数据的统计意义。否则短期观测的结果很可能是来自波动影响。
+
+     d. 要么有足够大的样本量，你可以基于足够大的样本量进行测试，那你获得的测试结果会更具统计意义。不断测试，持续思考和学习。
 
  ### (1) Hypothesis test, always used to evaluate the coefficients and their p-values, significance test, the relation of X with Y is statistically significant or not
 
