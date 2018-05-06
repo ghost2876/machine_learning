@@ -1,4 +1,5 @@
 Statistics basic
+
  ### (0) A/B Testing
 
      先来了解t test和z test的区别：z-test：大样本；>30;符合z分布；t-test：小样本;<30;符合t分布。
