@@ -22,10 +22,13 @@ Machine Learning Parallel Strategy in Map Reduce
 
 Google的Planet系统paper专门实现Map Reduce化的Random Forest，还有Yahoo研究院也有paper。
 
-### 2. ML算法的Mahout
+### 2. ML算法的Mahout 0.9
 
 Mahout是一个函数库，它把日常常用的机器学习算法都封装成了函数，并且将这些算法的实现都MapReduce化了。你直接调用这些函数，就可以运用到这些MapReduce化的机器学习算法。访问mahout.apache.org就能看到所有Mahout里已经包含的MapReduce化的机器学习算法，当然有些算法是无法MapReduce化的，这类算法就不在Mahout里。
 
- <img src="Mahout_1.jpg" width="100%" height="100%" alt="Mahout_1"/><br />
+BMA笔记里直接搜Mahout可以找到很多相关的案例，有用kmeans进行聚类的，有用Naive Bayes对已经分词后的新闻文本进行分类（可以说成IBM的一个PoC，准备对thousands of contracts进行分类[是否有risk]）。使用Python的nltk分词，对中文用jieba，或者用gensim对词进行word2vec即向量化vectorizer。然后每篇新闻有个label，然后输入到Mahout的trainclassifier和testclassifier进行训练和测试，Mahout跑完以后自动会打印confusion matrix。具体过程参见BMA笔记2.8.11.2-“2.8.11.2	Mahout下基于Naïve bayes进行文本分类的专用命令trainclassifier和testclassifier”。hdfs dfs -cat。Mahout的命令trainclassifier使用cbayes类型
 
-### 3. ML算法的Spark MLlib
+ <img src="Mahout_1.jpg" width="100%" height="100%" alt="Mahout_1"/><br />
+ <img src="Mahout_2.jpg" width="100%" height="100%" alt="Mahout_2"/><br />
+
+### 3. ML算法的Spark MLlib 
