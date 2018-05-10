@@ -6,6 +6,9 @@ Machine Learning Parallel Strategy in Map Reduce
 
 所以说，需要反复自身迭代计算大量中间值和参数的ML算法都不适合Map Reduce化。不是说不行，只是效果并不好。不过毕竟对一些算法比如kNN进行Map Reduce后还是可以提升些效率试试的。
 
+ <img src="1.jpg" width="100%" height="100%" alt="1"/><br />
+ <img src="2.jpg" width="100%" height="100%" alt="2"/><br />
+
 ### 1. ML算法基于Hadoop的Map Reduce化（以kNN为例，其它不做过多研究）
 
 ***要想想案例怎么说，数据量多大，效果如何之类***
