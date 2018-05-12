@@ -20,7 +20,7 @@ k-Means
 
  参见.ipynb最下面的图
 
-2. 对样本点分布不是球形（选取centroids就有问题了）或是分布很不均匀（密度有影响）的情况会很糟糕，这时建议用DBSCAN：
+2. 对样本点分布不是球形（选取centroids就有问题了）或是分布很不均匀（密度有影响）的情况会很糟糕，对离群点Outliers也特别敏感（所以建议使用前先剔除离群点）。这时建议用DBSCAN：
 
  <img src="Issues.jpg" width="100%" height="100%" alt="Issues"/><br />
 
