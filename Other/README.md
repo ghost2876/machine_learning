@@ -1,5 +1,9 @@
 Others
 
+### 肘部法则Elbow Method
+
+Elbow Method是机器学习中经常用到的，尤其对K-Means或kNN，因为你不知道该设置什么样的k最合适，所以可以使用cross validation用sikit-learn的GridSearchCV。Elbow Method就是说，对kNN，再改变k效果不会更加改善，对k-Means，再改变k整个cluster聚簇的within-cluster sum of squares(WSS)的缩小程度也不会再更大。
+
 ### Ordinary Least Squares (OLS), Gradient Descent, Maximum Likelihood Estimation (MLE)
  
  ML homework_02.ipynb Question 1
