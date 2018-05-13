@@ -4,6 +4,9 @@ Others
 
 Elbow Method是机器学习中经常用到的，尤其对K-Means或kNN，因为你不知道该设置什么样的k最合适，所以可以使用cross validation用sikit-learn的GridSearchCV。Elbow Method就是说，对kNN，再改变k效果不会更加改善，对k-Means，再改变k整个cluster聚簇的within-cluster sum of squares(WSS)的缩小程度也不会再更大。
 
+### 机器学习中，我们经常需要给一些model设hyperparameters，什么是超参数，和参数有啥区别？
+在机器学习的上下文中，超参数是在开始学习过程之前设置值的参数，而不是通过训练得到的参数数据。通常情况下，需要对超参数进行优化，给学习机选择一组最优超参数，这样方便我们得到最优参数。
+
 ### Ordinary Least Squares (OLS), Gradient Descent, Maximum Likelihood Estimation (MLE)
  
  ML homework_02.ipynb Question 1
