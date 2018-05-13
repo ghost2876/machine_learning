@@ -20,7 +20,8 @@ b. boosting<br />
 ### bagging的理论依据
 
 central limit theorem，中心极限定理，这是random forest这种bagging strategy依托的理论依据，就是你有放回采样repeated sampling的分布符合normal distribution。正是有了这个理论依据，我们才敢用bagging策略。<br />
-常见的bagging策略比如Random Forest，它randomly split data，randomly choose features（一般取sqrt(n)个features），也就是说构建好几个bag，然后用这些bag各自train multiply classifiers and let them vote.
+常见的bagging策略比如Random Forest，它randomly split data，randomly choose features（一般取sqrt(n)个features），也就是说构建好几个bag，然后用这些bag各自train multiply classifiers and let them vote.<br />
+当然在scikit-learn中运用Bagging Regressor的时候，你可以选择用BaggingRegressor默认的decision tree模型，也可以为其设定base_estimator函数来指定一个模型。
 
 ### boosting
 
